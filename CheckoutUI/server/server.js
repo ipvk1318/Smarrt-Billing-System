@@ -10,6 +10,11 @@ let products = [];
 let orders = [];
 app.use(cors());
 
+app.get("/", (req,res) => {
+    res.setHeader("Access-Control-Allow-Credentials","true");
+    res.send("API is running..");
+});
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
